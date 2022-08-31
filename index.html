@@ -75,12 +75,13 @@
     }
 
     function getEnvironment() {
+		document.getElementById("os").append(liff.getOS())
     }
 
     async function main() {
       // alert("LINE Developers x Colorpack")
       await liff.init({ liffId: "1656511624-1yJLErAW" })
-      // getEnvironment()
+      getEnvironment()
       // getUserProfile()
       // getContext()
       // getFriendship()
