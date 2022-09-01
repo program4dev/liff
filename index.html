@@ -65,7 +65,20 @@
     async function getFriendship() {
     }
 
-    async function sendMsg() {
+    async function sendMsg() 
+	{
+		if(liff.getContext().type !== 'none')
+		{
+			await liff.sendMessages([
+				// 1 push message can have 5 bubbles at maximum
+				{
+					"type":"sticker",
+					"stickerId":1,
+					"packageId":1
+				}
+			]);
+			alert("Message sent");
+		}
     }
 
     function getContext() 
